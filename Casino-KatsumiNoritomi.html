@@ -21,7 +21,16 @@ nQty = parseInt(sEntry);
 nTotalvalue = nQty * 20 + nTotalValue;
 nTotalCount = nTotalCount + nQty;
 document.write("<h2 style='color: blue'.Blue Chips Qty =" + nQty + ", value = $"+ nQty* 20 + "<h2>");
-document.write("<h1 style='color: green'>All Chips Quantity = " + nTotalCount + "<br)All Chips Value = $"+ nTotalValue + "<h1>");
+sEntry = prompt("Enter Quantity Red Chips, "0")
+nQty = parseInt(sEntry);
+nTotalvalue = nQty * 50 + nTotalValue;
+nTotalCount = nTotalCount + nQty;
+document.write("<h2 style='color: red'.Red Chips Qty =" + nQty + ", value = $"+ nQty* 50 + "<h2>");  
+sEntry = prompt("Enter Quantity Gren Chips, "0")
+nQty = parseInt(sEntry);
+nTotalvalue = nQty * 100 + nTotalValue;
+nTotalCount = nTotalCount + nQty;
+document.write("<h2 style='color: green'>All Chips Quantity = " + nTotalCount + "<br)All Chips Value = $"+ nTotalValue + "<h2>");
   </script>
   </body>
 </html>
