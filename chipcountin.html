@@ -1,0 +1,44 @@
+<!DOCTYOW html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+</head>
+<body style="background-color: aqua;"></body>
+<h1> Chip Counting Program</h1>
+<p>This progrm is counting chip colors an values.</p>
+<li><h4>Black Chip=$5</h4></li>
+<li><h4>Blue Chip=$20</h4></li>
+<li><h4>Red Chip=$50</h4></li>
+<li><h4>Green Chip=$100</h4></li>
+
+<script>
+var nTotalvalue = 0, nTotalCount =0, sEntry, nQty;
+sEntry = prompt("Enter Quantity Black Chips", "0")
+nQty = parseInt(sEntry);
+nTotalvalue = nQty * 5 + nTotalvalue;
+nTotalCount =nTotalCount + nQty;
+document.write("<h2>Black Chip Qty = " + nQty + ", Value = $" + nQty * 5 + "<h2>");
+sEntry = prompt("Entry Quantity Blue Chips", "0")
+nQty = parseInt(sEntry);
+nTotalvalue = nQty * 20 + nTotalvalue;
+nTotalCount = nTotalCount +nQty;
+document.write("<h2 style= 'color:blue'>Blue Chips Qty = " + nQty + ", value =$" + nQty *20 + "<h2>");
+sEntry = prompt("Entry Quantity Red Chips", "0")
+nQty = parseInt(sEntry);
+nTotalvalue = nQty * 50 + nTotalvalue;
+nTotalCount = nTotalCount +nQty;
+document.write("<h2 style= 'color:red'>Red Chips Qty = " + nQty +", value =$" + nQty *50 + "<h2>");
+sEntry = prompt("Entry Quantity Green Chips", "0")
+nQty = parseInt(sEntry);
+nTotalvalue = nQty * 100 + nTotalvalue;
+nTotalCount = nTotalCount +nQty;
+document.write("<h2 style = 'color:green'>Green Chips Qty = " + nQty +", value =$" + nQty *100 + "<h2>");
+
+document.write("<h1 style = 'color: purple'>All Chips Qty = " + nTotalCount + "<br>All chips Value = $" + nTotalvalue + "<h2>");
+
+</script>
+</body>
+</html>
