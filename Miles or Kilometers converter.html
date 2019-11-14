@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<head>
+<html lang="en">
+  <head>
   <meta Charset="utf-8">
   <title>Miles or Kilometers Converter</title>
 </head>
@@ -10,10 +11,12 @@
     if (sEntry == "m")
     {
       fEntry = parseFloat(window.prompt("Enter miles: ", "0"));
+      fResult =Entry * 1.609;
+      document.write("<p>" +fEntry +"km =" + f result +" miles</p>");
     }
     else
     {
-      fEntry = parseFload(window.prompt("Enter kirometers: ", "0"));
+      fEntry = parseFloat(window.prompt("Enter kirometers: ", "0"));
       fResult = fEntry / 1.609;
       document.write("<p>Reload for another conversion</p>");
   </script>
