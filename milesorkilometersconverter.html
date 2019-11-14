@@ -10,13 +10,13 @@
     sEntry = window.prompt("Is input distance miles or km? (m or k)", "m");
     if (sEntry == "m")
     {
-      fEntry = parseFloat(window.prompt("Enter miles: ", "0"));
+      fEntry = parseFloat(window.prompt("Enter miles:", "0"));
       fResult =Entry * 1.609;
-      document.write("<p>" + fEntry +" miles =" + fresult + " kms</p>");
+      document.write("<p>" + fEntry +" miles =" + fresult +" kms</p>");
     }
     else
     {
-      fEntry = parseFloat(window.prompt("Enter kirometers: ", "0"));
+      fEntry = parseFloat(window.prompt("Enter kilometers: ", "0"));
       fResult = fEntry / 1.609;
       document.write("<p>" + fEntry +" km = " + fResult + " miles</p>");
     }
