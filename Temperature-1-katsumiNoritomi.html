@@ -11,20 +11,19 @@
                              
 <script>
 var cTemp, fTemp, fResult;
-cTemp = window.prompt("Is Entry degrees C or F?","0");
-if(cTemp == " C "|| cTemp == "c")
-{                                          
-fTemp = parseFloat(window.prompt("Enter C degrees:", "0"));
+cTemp = window.prompt("is Entry degrees C or F?","0");
+if(cTemp == " C "|| cTemp = "c")
+ {                                          
+fTemp = parseFloat(window.prompt("Enter C degrees:","0"));
  fResutl = fTemp * 1.8 +32;                                                       
-document.write("<p>" + fTemp + "C  =" + fResult + " F ");
+document.write("<p>" + fTemp + "C  =" + fResult + "F");
 }                                          
-                                          
-                                          
+                                                                                  
   else
 {                                          
-fTemp = parseFloat(window.prompt("Enter F degrees:", "0"));
+fTemp = parseFloat(window.prompt("Enter F degrees:","0"));
 fResult  = 5 / 9 *  (fTemp - 32);
-document.write("<p>" + fTemp + "F  =" + fResult + " C ");
+document.write("<p>" + fTemp + "F =" + fResult + "C");
 }                                                                                
                                                                                                                                                                    
                                           
