@@ -10,20 +10,21 @@
                <P>Katsumi Noritomi</p>
                              
 <script>
-var cTemp, fTemp, sEntry;
-if(sEntry = prompt(" Enter degree C =", " 0 ");
+var cTemp, fTemp, fResult;
+cTemp = window.prompt("Is Entry degrees C or F?","0");
+if(cTemp == " C "|| cTemp == "c")
 {                                          
-cTemp = parseFloat(sEntry));
-fTemp = 1.8 * cTemp  + 32;
-document.write(cTemp +  " C =" + fTemp + " F ")
+fTemp = parseFloat(window.prompt("Enter C degrees:", "0"));
+ fResutl = fTemp * 1.8 +32;                                                       
+document.write("<p>" + fTemp + "C  =" + fResult + " F ");
 }                                          
                                           
                                           
-  else(sEntry = prompt(" Enter degree F =", " 0 ");
+  else
 {                                          
-fTemp = parseFloat(sEntry));
-cTemp  = 5 / 9 *  (fTemp - 32);
-document.write(cTemp + " F =" + cTemp + " C ")
+fTemp = parseFloat(window.prompt("Enter F degrees:", "0"));
+fResult  = 5 / 9 *  (fTemp - 32);
+document.write("<p>" + fTemp + "F  =" + fResult + " C ");
 }                                                                                
                                                                                                                                                                    
                                           
