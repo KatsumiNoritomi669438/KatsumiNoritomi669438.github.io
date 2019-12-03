@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="Qutf-8">
-<titile>average Age</title>
+<meta charset="utf-8">
+<title>average Age</title>
 </head>
 <body>
 <script>
 var nAge=0, nAgeTotal=0, nCount=0;
-while(nCount <5)
+
+nAge=parseInt(window.prompt("Enter nAge",""));
+while(nAge >= 0) 
 {
-    nAge=parseInt(window.prompt("Enter Age",""));
     nAgeTotal = nAgeTotal + nAge;
     nCount = nCount + 1;
     document.write("Age " + nCount + " = " + nAge + "<br>");
-  
+    nAge=parseInt(window.prompt("Enter nAge",""));
 }
 document.write("<h2>The Average Age = " + nAgeTotal/nCount + "</h2>");
 </script>
