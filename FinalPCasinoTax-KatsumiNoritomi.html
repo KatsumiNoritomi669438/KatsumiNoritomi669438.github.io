@@ -7,38 +7,38 @@
     </head>
     <body style="background-color: aqua; text-align: center;">
         <script type="text/javascript">
-            var sChipColor = ["Black","Blue","Red","Green","Gold"];
-            var nChipValue = [5, 20, 50, 100, 500];
+            var sChipColor = ("Black","Blue","Red","Green","Gold");
+            var nChipValue =(5, 20, 50, 100, 500);
             var nReceipts, nChipTotal, nWinnings;
             document.write("<h1>Welcome to the Casino Chip Counter</h1> <p>by Katsumi Noritomi</p>");
-            alert("Welcome to the Casino Chip Counter v2.0")
+            //alert("Welcome to the Casino Chip Counter v2.0")
             nReceipts = getReceipts();
             document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
             nChipTotal = getChips(sChipColor, nChipValue);
             document.write("<h3>Total Value Chips = $" + nChipTotal + "</h3><hr>");
             nWinnigs = nChipTotal - nReceipts;
-            displayResults(nChipTotal,nWinnigs);
+            displayResults(nChipTotal, nWinnigs);
 
-            function getReceipt() {
+            function getReceipts() {
                 var nSum = 0;
-                for(var nI = 1; nI< 100; nI++){
+                for(var nI = 1; nI< 100; nI++) {
                     var nEntry = parseInt(window.promt("Enter Receipt " +nI + " or Q to Quit",""));
                     if(isNan(nEntry))
                         break;
                     if(nEntry < 0) {
-                        alert("Receipts cannot be negative! \nTry again..");
+                        alert("Receipts cannot be negative! \nTry again...");
                         continue;
                     }
-                    document.write("Receipt " + nI + " = $" + nEntry + "<br/>");
+                    document.write("Receipt " + nI + " = $" + nEntry + "<br />");
                     nSum = nSum + nEntry;
                 }
-                return nSum
+                return nSum;
 
             }
             function getChips(sColor, nValue) {
                 var nSum = 0;
                 for(var nI = 0; nI < sColor,length; nI++) {
-                    var nEntry = parseInt(window.prompt("How many"  + sColor[nI]+" chips?", "0"));                 
+                    var nEntry = parseInt(window.prompt("How many"  + sColor[nI]+" Chips?", "0"));                 
                     document.write(sColor[nI] + "Chips: Quantity = " + nEntry + " and Value = $" + (nEntry * nValue[nI]) + "<br />");
                     nSum += nEntry * nValue[nI];
                 }
@@ -50,12 +50,14 @@
                     fTax = nWin * 0.10;
                     sSSN = prompt("Enter your Social Security Number", "000-00-0000");
                 }
-                else if(confirm("Are you a USA or Guam resident?\n(20% Withholding Tax")){
+                else if(confirm("Are you a USA or Guam resident?\n(20% Withholding Tax)")) {
                     fTax = nWin * 0.20;
                     sSSN = prompt("Enter your Social Security Number", "000-00-0000");
                 }
                 if(nWin >= 0) {
-                    document.write("<h3Congratulation you won $" + nWin + ".<h3><p>Please come back! We want our money back.</p>");
+                    document.write("<h3><p>Congratulation you won $" 
+                    + nWin 
+                    + ".</h3><p>Please come back! We want our money back.</p>");
                 }
                 else {
                     fTax = 0;
@@ -63,7 +65,7 @@
                 }
                 fCashOut = nTotal - fTax;
                 document.write("<p>Tax Withholding = $" + fTax + "  for SSN = " + sSSN + "</p>");              
-                document.write("<h3> Your Cash Out = $" + fCashOut + "</h3>");
+                document.write("<h3> Your Cash Out = $" + fCashOut + "</h3>");             
             }             
         </script> 
     </body>
