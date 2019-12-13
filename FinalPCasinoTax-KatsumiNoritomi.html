@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
         <title>Casino Chip and Tax</title>
-    </head>
+ </head>
     <body style="background-color: aqua; text-align: center;">
         <script type="text/javascript">
             var sChipColor = ["Black","Blue","Red","Green","Gold"];
             var nChipValue =[5, 20, 50, 100, 500];
             var nReceipts, nChipTotal, nWinnings;
             document.write("<h1>Welcome to the Casino Chip Counter</h1> <p>by Katsumi Noritomi</p>");
-            alert("Welcome to the Casino Chip Counter v2.0")
+            //alert("Welcome to the Casino Chip Counter v2.0")
             nReceipts = getReceipts();
             document.write("<h3>Total Receipts = $" + nReceipts + "</h3><hr>");
             nChipTotal = getChips(sChipColor, nChipValue);
@@ -41,8 +41,8 @@
                     var nEntry = parseInt(window.prompt("How many"  + sColor[nI]+" Chips?", "0"));                 
                     document.write(sColor[nI] + "Chips: Quantity = " + nEntry + " and Value = $" + (nEntry * nValue[nI]) + "<br />");
                     nSum += nEntry * nValue[nI];
-                }
-                return nSum;
+               }
+              return nSum;
             }
 
             function displayResults(nTotal,nWin) {
