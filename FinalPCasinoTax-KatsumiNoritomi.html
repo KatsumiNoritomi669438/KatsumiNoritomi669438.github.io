@@ -7,8 +7,8 @@
     </head>
     <body style="background-color: aqua; text-align: center;">
         <script type="text/javascript">
-            var sChipColor = ("Black","Blue","Red","Green","Gold");
-            var nChipValue =(5, 20, 50, 100, 500);
+            var sChipColor = ["Black","Blue","Red","Green","Gold"];
+            var nChipValue =[5, 20, 50, 100, 500];
             var nReceipts, nChipTotal, nWinnings;
             document.write("<h1>Welcome to the Casino Chip Counter</h1> <p>by Katsumi Noritomi</p>");
             alert("Welcome to the Casino Chip Counter v2.0")
@@ -22,8 +22,8 @@
             function getReceipts() {
                 var nSum = 0;
                 for(var nI = 1; nI< 100; nI++) {
-                    var nEntry = parseInt(window.promt("Enter Receipt " +nI + " or Q to Quit",""));
-                    if(isNan(nEntry))
+                    var nEntry = parseInt(window.prompt("Enter Receipt " +nI + " or Q to Quit",""));
+                    if(isNaN(nEntry))
                         break;
                     if(nEntry < 0) {
                         alert("Receipts cannot be negative! \nTry again...");
@@ -37,11 +37,12 @@
             }
             function getChips(sColor, nValue) {
                 var nSum = 0;
-                for(var nI = 0; nI < sColor,length; nI++) {
+                for(var nI = 0; nI < sColor.length; nI++) {
                     var nEntry = parseInt(window.prompt("How many"  + sColor[nI]+" Chips?", "0"));                 
                     document.write(sColor[nI] + "Chips: Quantity = " + nEntry + " and Value = $" + (nEntry * nValue[nI]) + "<br />");
                     nSum += nEntry * nValue[nI];
                 }
+                return nSum;
             }
 
             function displayResults(nTotal,nWin) {
